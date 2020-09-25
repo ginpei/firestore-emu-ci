@@ -3,6 +3,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "jest --watch",
+    "test-on-emu": "npx firebase emulators:exec \"npm t\"",
     "test": "jest"
   },
   "dependencies": {
