@@ -27,7 +27,6 @@ export function prepareFirestore(
   fs.cleanUp = () => {
     app.delete();
     adminApp.delete();
-    cleanUpFirestore(projectId);
   };
 
   return fs;
@@ -39,10 +38,6 @@ export function prepareAdminFirestore(
   const adminApp = initializeAdminApp({ projectId });
   const fs = adminApp.firestore();
   return fs;
-}
-
-export function cleanUpFirestore(projectId = randomName()): Promise<void> {
-  return clearFirestoreData({ projectId });
 }
 
 function randomName() {
