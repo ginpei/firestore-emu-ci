@@ -1,21 +1,25 @@
 {
   "private": true,
   "scripts": {
+    "emu": "npx firebase emulators:start",
     "lint": "eslint .",
     "start": "jest --watch",
-    "test-on-emu": "npx firebase emulators:exec \"npm t\"",
+    "test-on-emu": "npx firebase emulators:exec \"FB_EMU=1 npm t\"",
     "test": "jest"
   },
   "dependencies": {
-    "@types/node": "^14.0.26"
+    "@types/node": "^14.0.26",
+    "firebase": "^7.21.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-typescript": "^7.8.3",
+    "@firebase/rules-unit-testing": "^1.0.4",
     "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
+    "babel-polyfill": "^6.26.0",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^6.8.0",
@@ -23,6 +27,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "firebase-admin": "^9.2.0",
     "firebase-tools": "^8.11.2",
     "jest": "^25.1.0",
     "prettier": "^2.0.5",

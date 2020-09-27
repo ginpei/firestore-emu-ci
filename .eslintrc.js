@@ -30,7 +30,7 @@ module.exports = {
     "import/extensions": ["error", "never"],
     "import/no-extraneous-dependencies": [
       "error",
-      { devDependencies: ["**/*.test.{ts,tsx}"] },
+      { devDependencies: ["**/*.test.{ts,tsx}", "**/tests/*"] },
     ],
     "import/prefer-default-export": "off",
   },
